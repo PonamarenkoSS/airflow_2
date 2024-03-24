@@ -21,7 +21,7 @@ default_args = {
 }
 
 dag = DAG(
-    'OpenWeatherApi',
+    'OpenWeatherApi_http',
     default_args=default_args,
     description='DAG to fetch and display temperature from OpenWeather API',
     schedule_interval=None,
