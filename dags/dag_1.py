@@ -6,7 +6,7 @@ import json
 from airflow.models import Variable
 
 API_key = Variable.get('openweather_key')
-url = f"/data/2.5/weather?lat=53.12&lon=50.06&appid={API_key}&units=metric"
+url = f"/data/2.5/weather?q=Samara,ru&ecxlude=current&appid={API_key}&units=metric"
 
 def get_weather(ti):
     current_temp = ti.xcom_pull(task_ids='get_weather')
