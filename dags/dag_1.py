@@ -1,7 +1,7 @@
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import BranchPythonOperator, PythonOperator
-from airflow.operators.http_operator import SimpleHttpOperator
+from airflow.providers.http.operators.http import HttpOperator
 import json
 from airflow.models import Variable
 
@@ -27,7 +27,7 @@ dag = DAG(
     schedule_interval=None,
 )
 
-get_response = SimpleHttpOperator(
+get_response = HttpOperator(
     task_id='get_weather',
     method='GET',
     http_conn_id='openweather',
