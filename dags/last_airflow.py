@@ -5,6 +5,7 @@ from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.postgres_operator import PostgresOperator
 import pandas as pd
 import psycopg2
+import random
 
 default_args = {
     'owner': 'airflow',
