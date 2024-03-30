@@ -2,7 +2,7 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.http_operator import SimpleHttpOperator
-from airflow.operators.telegram_operator import TelegramOperator
+from airflow.providers.telegram.operators.telegram import TelegramOperator
 import json
 from airflow.models import Variable
 
