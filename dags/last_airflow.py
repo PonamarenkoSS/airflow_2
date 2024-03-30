@@ -2,7 +2,7 @@ from datetime import datetime
 from airflow.models import DAG
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
-from airflow.providers.postgres.hooks.postgres import PostgresOperator
+from airflow.operators.postgres_operator import PostgresOperator
 import pandas as pd
 import psycopg2
 
